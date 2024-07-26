@@ -4,7 +4,6 @@ from selenium import webdriver
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
 driver.get("https://practice.automationtesting.in/")
-
 btn_my_account_menu = driver.find_element_by_xpath("/html/body/div[1]/div[1]/header/div[2]/nav/ul/li[2]/a").click()
 
 #Автаризация аккаунта
