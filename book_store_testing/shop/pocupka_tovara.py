@@ -11,9 +11,11 @@ window_email = driver.find_element_by_css_selector("#username").send_keys("a.tes
 window_password = driver.find_element_by_css_selector("#password").send_keys("testpassword251694/")
 btn_login = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/form/p[3]/input[3]").click()
 print("Авторизация прошла успешно")
+#Перейти в магазин и добавить книгу HTML5 WebApp Develpment в корзину. 
 btn_shop = driver.find_element_by_xpath("/html/body/div[1]/div[1]/header/div[2]/nav/ul/li[1]/a").click()
 driver.execute_script("window.scrollBy(0, 300);")
 btn_add_book_html5 = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/ul/li[4]/a[2]").click()
+# Перейти в корзину и оформить заказ.
 btn_basket = driver.find_element_by_xpath("/html/body/div[1]/div[1]/header/div[2]/nav/ul/li[6]/a/span[1]").click()
 btn_proceed_to_checkout = driver.find_element_by_css_selector("#page-34 > div > div.woocommerce > div > div > div > a")
 btn_proceed_to_checkout.click()
@@ -37,7 +39,7 @@ country_option.click()
 address = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div/div[1]/form[2]/div[1]/div[1]/div/p[7]/input")
 city = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div/div[1]/form[2]/div[1]/div[1]/div/p[9]/input")
 postcode = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div/div[1]/form[2]/div[1]/div[1]/div/p[11]/input")
-#Перед вводом данных очистить поля.
+#Перед вводом данных очистить поля. (При переходе в оформление, происходит автозаполнение полей)
 first_name.clear()
 last_name.clear()
 email.clear()
