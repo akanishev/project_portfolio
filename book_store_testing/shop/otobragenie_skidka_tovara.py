@@ -18,7 +18,7 @@ time.sleep(4)
 btn_shop = driver.find_element_by_xpath("/html/body/div[1]/div[1]/header/div[2]/nav/ul/li[1]/a").click()
 btn_book_android_quick_start = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/ul/li[1]/a[1]/h3").click()
 
-#Убедиться что содержимое старой цены = 600.00, а новой = 450.00
+#Убедиться что старая цена = 600.00, а новая = 450.00
 old_price = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div[2]/div[1]/p/del/span")
 new_price = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div/div[2]/div[1]/p/ins/span")
 
