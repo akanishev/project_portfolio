@@ -1,37 +1,37 @@
-# Импортируем необходимые библиотеки
+# РРјРїРѕСЂС‚РёСЂСѓРµРј РЅРµРѕР±С…РѕРґРёРјС‹Рµ Р±РёР±Р»РёРѕС‚РµРєРё
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time
 
-# Открываем браузер и указанную страницу
+# РћС‚РєСЂС‹РІР°РµРј Р±СЂР°СѓР·РµСЂ Рё СѓРєР°Р·Р°РЅРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
 driver = webdriver.Chrome()
 driver.get("https://only.digital")
 time.sleep(4)
 
-# Поиск элементов
+# РџРѕРёСЃРє СЌР»РµРјРµРЅС‚РѕРІ
 try:
     element_Footer = driver.find_element_by_xpath("/html/body/div[1]/div[5]/main/div[1]/footer")
-    print("Footer = "Элемент найден")
+    print("Footer = "Р­Р»РµРјРµРЅС‚ РЅР°Р№РґРµРЅ")
 except NoSuchElementException:
-    print("Элемент не найден")
+    print("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ")
 
 try:
     element_span_VK = driver.find_element_by_xpath("/html/body/div[1]/div[5]/main/div[1]/footer/div[1]/div[2]/div[2]/div/div[2]/a/span")
-    print("VK span = "Элемент найден")
+    print("VK span = "Р­Р»РµРјРµРЅС‚ РЅР°Р№РґРµРЅ")
 except NoSuchElementException:
-    print("VK span = "Элемент не найден")
+    print("VK span = "Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ")
 
 try:
     element_span_Telegram = driver.find_element_by_xpath("/html/body/div[1]/div[5]/main/div[1]/footer/div[1]/div[2]/div[2]/div/div[3]/a/span")
-    print("Telegram span = "Элемент найден")
+    print("Telegram span = "Р­Р»РµРјРµРЅС‚ РЅР°Р№РґРµРЅ")
 except NoSuchElementException:
-    print("Telegram span = "Элемент не найден")
+    print("Telegram span = "Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ")
 
 try:
     element_buttonUP = driver.find_element_by_xpath("/html/body/div[1]/div[5]/main/div[1]/footer/div[2]")
-    print("Button UP = "Элемент найден")
+    print("Button UP = "Р­Р»РµРјРµРЅС‚ РЅР°Р№РґРµРЅ")
 except NoSuchElementException:
-    print("Button UP = "Элемент не найден")
+    print("Button UP = "Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ")
 
 
 driver.quit()
